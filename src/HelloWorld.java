@@ -2,26 +2,27 @@ import java.util.Scanner;
 
 public class HelloWorld {
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
+        int age = -1;
 
-        // Nhập số N
-        int N = scanner.nextInt();
+        do {
+            System.out.print("Nhập tuổi của bạn: ");
 
-        if (N <= 0) {
-            System.out.println("Số nhập vào không hợp lệ");
-        } else {
-            int sum = 0;
+            // Kiểm tra có phải số nguyên không
+            if (scanner.hasNextInt()) {
+                age = scanner.nextInt();
 
-            // Vòng lặp for tính tổng từ 1 đến N
-            for (int i = 1; i <= N; i++) {
-                sum += i;
+                if (age <= 0) {
+                    System.out.println("Vui lòng nhập vào một số nguyên và lớn hơn 0");
+                }
+            } else {
+                // Nếu không phải số nguyên
+                System.out.println("Vui lòng nhập vào một số nguyên và lớn hơn 0");
+                scanner.next(); // bỏ giá trị sai
             }
 
-            // In kết quả
-            System.out.println("Tổng từ 1 đến " + N + " là: " + sum);
-        }
+        } while (age <= 0);
 
-        scanner.close();
+        System.out.println("Tuổi của bạn là " + age + "!");
     }
 }
