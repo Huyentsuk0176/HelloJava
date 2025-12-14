@@ -2,19 +2,40 @@ import java.util.Scanner;
 
 public class HelloWorld {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Nhập số nguyên n: ");
-        int n = sc.nextInt();
+        System.out.print("Nhập một số nguyên từ 1 đến 7: ");
+        int day = scanner.nextInt();
 
-        if (n == 0) {
-            System.out.println("Số không phải chẵn cũng không phải lẻ");
-        } else if (n % 2 == 0) {
-            System.out.println("Số " + n + " là số chẵn");
-        } else {
-            System.out.println("Số " + n + " là số lẻ");
+        switch (day) {
+            case 1:
+                System.out.println("Chủ nhật");
+                break;
+            case 2:
+                System.out.println("Thứ hai");
+                break;
+            case 3:
+                System.out.println("Thứ ba");
+                break;
+            case 4:
+                System.out.println("Thứ tư");
+                break;
+            case 5:
+                System.out.println("Thứ năm");
+                break;
+            case 6:
+                System.out.println("Thứ sáu");
+                break;
+            case 7:
+                System.out.println("Thứ bảy");
+                break;
+            default:
+                System.out.println("Số nhập vào không hợp lệ");
         }
+
+        scanner.close();
     }
 }
+
 
 
