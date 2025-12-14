@@ -2,40 +2,26 @@ import java.util.Scanner;
 
 public class HelloWorld {
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Nhập một số nguyên từ 1 đến 7: ");
-        int day = scanner.nextInt();
+        // Nhập số N
+        int N = scanner.nextInt();
 
-        switch (day) {
-            case 1:
-                System.out.println("Chủ nhật");
-                break;
-            case 2:
-                System.out.println("Thứ hai");
-                break;
-            case 3:
-                System.out.println("Thứ ba");
-                break;
-            case 4:
-                System.out.println("Thứ tư");
-                break;
-            case 5:
-                System.out.println("Thứ năm");
-                break;
-            case 6:
-                System.out.println("Thứ sáu");
-                break;
-            case 7:
-                System.out.println("Thứ bảy");
-                break;
-            default:
-                System.out.println("Số nhập vào không hợp lệ");
+        if (N <= 0) {
+            System.out.println("Số nhập vào không hợp lệ");
+        } else {
+            int sum = 0;
+
+            // Vòng lặp for tính tổng từ 1 đến N
+            for (int i = 1; i <= N; i++) {
+                sum += i;
+            }
+
+            // In kết quả
+            System.out.println("Tổng từ 1 đến " + N + " là: " + sum);
         }
 
         scanner.close();
     }
 }
-
-
-
