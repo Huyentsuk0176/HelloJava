@@ -1,21 +1,20 @@
+import java.util.Scanner;
+
 public class HelloWorld {
     public static void main(String[] args) {
-        int a = 10;
-        int b = 3;
+        Scanner sc = new Scanner(System.in);
 
-        int tong = a + b;
-        int hieu = a - b;
-        int tich = a * b;
-        int thuong = a / b;
-        int du = a % b;
+        System.out.print("Nhập số nguyên n: ");
+        int n = sc.nextInt();
 
-        System.out.println("Gia tri a = " + a);
-        System.out.println("Gia tri b = " + b);
-        System.out.println("Tong a + b = " + tong);
-        System.out.println("Hieu a - b = " + hieu);
-        System.out.println("Tich a * b = " + tich);
-        System.out.println("Thuong a / b = " + thuong);
-        System.out.println("Du a % b = " + du);
+        if (n == 0) {
+            System.out.println("Số không phải chẵn cũng không phải lẻ");
+        } else if (n % 2 == 0) {
+            System.out.println("Số " + n + " là số chẵn");
+        } else {
+            System.out.println("Số " + n + " là số lẻ");
+        }
     }
 }
+
 
